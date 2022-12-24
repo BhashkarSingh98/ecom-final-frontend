@@ -5,7 +5,6 @@ import styled from "styled-components";
 import { mobile } from "../responsive";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -62,14 +61,14 @@ const Navbar = () => {
         <Left>
           
           
-          <Logo>iShop</Logo>
+        <Link to="/" style={{ textDecoration: "none",color:"black"}}>  <Logo>iShop</Logo></Link>
         </Left>
         
         <Right>
-          <NavLink style={{ textDecoration: "none"}} to="/"><MenuItem>Home</MenuItem></NavLink>
-          <NavLink style={{ textDecoration: "none"}} to="/men"><MenuItem>Men</MenuItem></NavLink>
-          <NavLink style={{ textDecoration: "none"}} to="/women"><MenuItem>Women</MenuItem></NavLink>
-          <NavLink style={{ textDecoration: "none"}} to="/kids"><MenuItem>Kids</MenuItem></NavLink>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/"><MenuItem>Home</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/men"><MenuItem>Men</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/women"><MenuItem>Women</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/kids"><MenuItem>Kids</MenuItem></Link>
           <MenuItem>SIGN UP</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <Link to="/cart">
