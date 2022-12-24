@@ -25,7 +25,7 @@ const Filter = styled.div`
 `;
 
 const FilterText = styled.span`
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
   margin-right: 20px;
   ${mobile({ marginRight: "0px" })}
@@ -87,7 +87,8 @@ const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products cat={cat} filters={filters} sort={sort} />
+      {/* <Products cat={cat} filters={filters} sort={sort} /> */}
+      <Products sort={sort}/>
       <Newsletter />
       <Footer />
     </Container>
