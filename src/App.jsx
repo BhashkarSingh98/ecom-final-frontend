@@ -4,6 +4,9 @@ import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Cart from "./pages/Cart";
+import Men from "./components/Men";
+import Women from "./components/Women";
+import Kids from "./components/Kids";
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +32,15 @@ const App = () => {
         </Route>
         <Route path="/cart">
           <Cart />
+        </Route>
+        <Route path="/men">
+          <Men />
+        </Route>
+        <Route path="/women">
+          <Women />
+        </Route>
+        <Route path="/Kids">
+          <Kids />
         </Route>
         <Route path="/success">
           <Success />

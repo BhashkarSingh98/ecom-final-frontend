@@ -13,25 +13,27 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0,, 0, 0.2);
   z-index: 3;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s ease;
   cursor: pointer;
+  color:"green"
 `;
 
 const Container = styled.div`
   flex: 1;
   margin: 5px;
   min-width: 280px;
-  height: 350px;
+  height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5fbfd;
+  background-color: #f0fbf6;
   position: relative;
+  border-radius: 50%;
 
   &:hover ${Info}{
     opacity: 1;
@@ -55,7 +57,7 @@ const Icon = styled.div`
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: white;
+  background-color:rgba(0,, 0, 0.2) ;
   display: flex;
   align-items: center;
   justify-content: center;

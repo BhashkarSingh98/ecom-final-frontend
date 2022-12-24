@@ -158,7 +158,8 @@ const Product = () => {
       <Announcement />
       <Wrapper>
         <ImgContainer>
-          <Image src={product.img} />
+           <Image src={product.img} /> 
+          {/* <Image src="https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png" /> */}
         </ImgContainer>
         <InfoContainer>
           <Title>{product.title}</Title>
