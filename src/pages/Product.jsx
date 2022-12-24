@@ -154,6 +154,7 @@ const Product = () => {
   };
   return (
     <Container>
+      <Announcement />
       <Navbar />
       <Announcement />
       <Wrapper>
