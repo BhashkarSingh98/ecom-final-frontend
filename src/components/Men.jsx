@@ -12,6 +12,12 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+const Title = styled.h1`
+  font-size: 30px;
+  margin-left: 90px;
+  margin-bottom: 40px;
+
+`;
 
 const Men = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
@@ -22,8 +28,9 @@ const Men = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `https://sore-lime-abalone-gear.cyclic.app/api/men?category=${cat}`
-            : "https://sore-lime-abalone-gear.cyclic.app/api/men"
+            ? ` https://enchanting-ray-vest.cyclic.app/api/products?category=${cat}`
+            :  "https://enchanting-ray-vest.cyclic.app/api/products"
+           
         );
         setProducts(res.data);
       } catch (err) {}
@@ -62,12 +69,16 @@ const Men = ({ cat, filters, sort }) => {
     <>
     <Announcement/>
     <Navbar/>
+    <Announcement/>
+
+    <Title>MEN</Title>
 
     <Container>
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
-        .slice(0, 8)
+        .filter((elem) => elem.gender === "male")
+        .slice(0, 16)
         .map((item) => <Product item={item} key={item.id} />)}
     </Container>
         </>

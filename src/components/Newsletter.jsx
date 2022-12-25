@@ -1,4 +1,4 @@
-import { Send } from "@material-ui/icons";
+import { Search } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
 
@@ -40,7 +40,7 @@ const Input = styled.input`
   border: none;
   flex: 8;
   padding-left: 20px;
-  border-radius:50px ;
+  border-radius:50px 0 0 50px ;
   outline:"none";
   
 
@@ -51,9 +51,9 @@ const Input = styled.input`
 const Button = styled.button`
   flex: 1;
   border: none;
-  background-color: red;
-  color: white;
-  border-radius:50px ;
+  background-color: white;
+  color: black;
+  border-radius:0px 50px  50px 0 ;
 `;
 
 const Newsletter = () => {
@@ -62,9 +62,9 @@ const Newsletter = () => {
       <Title>iShop</Title>
       <Desc>Find your best products.</Desc>
       <InputContainer>
-        <Input placeholder="Your email" />
+        <Input placeholder="Search " />
         <Button>
-          <Send />
+          <Search />
         </Button>
       </InputContainer>
     </Container>

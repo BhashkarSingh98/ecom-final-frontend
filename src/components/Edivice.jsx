@@ -12,8 +12,14 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+const Title = styled.h1`
+  font-size: 30px;
+  margin-left: 90px;
+  margin-bottom: 40px;
 
-const Kids = ({ cat, filters, sort }) => {
+`;
+
+const Edivice = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -22,8 +28,8 @@ const Kids = ({ cat, filters, sort }) => {
       try {
         const res = await axios.get(
           cat
-            ? `https://sore-lime-abalone-gear.cyclic.app/api/kids?category=${cat}`
-            : "https://sore-lime-abalone-gear.cyclic.app/api/kids"
+          ? ` https://enchanting-ray-vest.cyclic.app/api/products?category=${cat}`
+          :  "https://enchanting-ray-vest.cyclic.app/api/products"
         );
         setProducts(res.data);
       } catch (err) {}
@@ -60,13 +66,17 @@ const Kids = ({ cat, filters, sort }) => {
 
   return (
     <>
-    <Announcement/>
+     <Announcement/>
     <Navbar/>
+    <Announcement/>
+
+    <Title>E-DIVICE</Title>
 
     <Container>
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
+        .filter((elem) => elem.gender === "edivice")
         .slice(0, 8)
         .map((item) => <Product item={item} key={item.id} />)}
     </Container>
@@ -74,5 +84,5 @@ const Kids = ({ cat, filters, sort }) => {
   );
 };
 
-  export default Kids;
+  export default Edivice;
   

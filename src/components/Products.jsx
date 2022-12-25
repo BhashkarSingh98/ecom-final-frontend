@@ -61,7 +61,8 @@ const Products = ({ cat, filters, sort }) => {
       {cat
         ? filteredProducts.map((item) => <Product item={item} key={item.id} />)
         : products
-            .slice(0, 8)
+        .filter((elem) => elem.gender === "home")
+            .slice(0, 28)
             .map((item) => <Product item={item} key={item.id} />)}
     </Container>
   );
@@ -90,5 +91,5 @@ export default Products;
 //   );
 // };
 
-//export default Products;
+// export default Products;
 

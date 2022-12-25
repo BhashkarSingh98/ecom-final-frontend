@@ -65,12 +65,12 @@ const Navbar = () => {
         </Left>
         
         <Right>
-          <Link style={{ textDecoration: "none",color:"black"}} to="/"><MenuItem>Home</MenuItem></Link>
-          <Link style={{ textDecoration: "none",color:"black"}} to="/men"><MenuItem>Men</MenuItem></Link>
-          <Link style={{ textDecoration: "none",color:"black"}} to="/women"><MenuItem>Women</MenuItem></Link>
-          <Link style={{ textDecoration: "none",color:"black"}} to="/kids"><MenuItem>Kids</MenuItem></Link>
-          <MenuItem>SIGN UP</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/"><MenuItem>HOME</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/men"><MenuItem>MEN</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/women"><MenuItem>WOMEN</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/edivice"><MenuItem>E-DIVICE</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/register"><MenuItem>SIGN UP</MenuItem></Link>
+          <Link style={{ textDecoration: "none",color:"black"}} to="/login"><MenuItem>SIGN IN</MenuItem></Link>
           <Link to="/cart">
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">

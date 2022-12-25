@@ -34,25 +34,25 @@ const Title = styled.h1`
     margin-bottom: 20px;
 `;
 
-const Button = styled.button`
-    border:none;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: white;
-    color:gray;
-    cursor: pointer;
-    font-weight: 600;
-    margin-top: 220px;
-`;
+// const Button = styled.button`
+//     border:none;
+//     padding: 10px;
+//     border-radius: 10px;
+//     background-color: white;
+//     color:gray;
+//     cursor: pointer;
+//     font-weight: 600;
+//     margin-top: 220px;
+// `;
 
 const CategoryItem = ({ item }) => {
   return (
     <Container>
-      <Link to={`/products/${item.cat}`}>
+      <Link to={`/${item.cat}`}>
       <Image src={item.img} />
       <Info>
         <Title>{item.title}</Title>
-        <Button>Products..</Button>
+        {/* <Button>Products..</Button> */}
       </Info>
       </Link>
     </Container>

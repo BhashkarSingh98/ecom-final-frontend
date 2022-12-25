@@ -6,7 +6,7 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 import Men from "./components/Men";
 import Women from "./components/Women";
-import Kids from "./components/Kids";
+import Edivice from "./components/Edivice";
 import {
   BrowserRouter as Router,
   Switch,
@@ -39,8 +39,8 @@ const App = () => {
         <Route path="/women">
           <Women />
         </Route>
-        <Route path="/Kids">
-          <Kids />
+        <Route path="/edivice">
+          <Edivice />
         </Route>
         <Route path="/success">
           <Success />

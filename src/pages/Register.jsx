@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984661/pexels-photo-6984661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://images.unsplash.com/photo-1550639525-c97d455acf70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZHJlc3N8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60")
       center;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -19,7 +22,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 40%;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(52, 45, 45, 0.603);
   ${mobile({ width: "75%" })}
 `;
 
@@ -49,7 +52,7 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color: black;
   color: white;
   cursor: pointer;
 `;
@@ -67,10 +70,13 @@ const Register = () => {
           <Input placeholder="password" />
           <Input placeholder="confirm password" />
           <Agreement>
-            By creating an account, I consent to the processing of my personal
-            data in accordance with the <b>PRIVACY POLICY</b>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, praesentium molestias nesciunt, ipsum assumenda itaque eum iure corrupti mollitia atque perferendis.
           </Agreement>
-          <Button>CREATE</Button>
+          <Button>
+            <NavLink style={{ textDecoration: "none", color: "white" }} to="/login">
+              CREATE
+            </NavLink>
+          </Button>
         </Form>
       </Wrapper>
     </Container>

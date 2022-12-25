@@ -3,17 +3,20 @@ import styled from "styled-components";
 import { login } from "../redux/apiCalls";
 import { mobile } from "../responsive";
 import { useDispatch, useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: linear-gradient(
       rgba(255, 255, 255, 0.5),
       rgba(255, 255, 255, 0.5)
     ),
-    url("https://images.pexels.com/photos/6984650/pexels-photo-6984650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    url("https://images.unsplash.com/photo-1521722776011-39ec91e0c14b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTMxfHxmYXNoaW9ufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60")
       center;
   background-size: cover;
+  background-position: center;
+      background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +25,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 25%;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(52, 45, 45, 0.603);
   ${mobile({ width: "75%" })}
 `;
 
@@ -47,7 +50,7 @@ const Button = styled.button`
   width: 40%;
   border: none;
   padding: 15px 20px;
-  background-color: teal;
+  background-color:black;
   color: white;
   cursor: pointer;
   margin-bottom: 10px;
@@ -93,11 +96,12 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button onClick={handleClick} disabled={isFetching}>
-            LOGIN
+          <NavLink style={{ textDecoration: "none",color:"white"}} to="/">LOGIN</NavLink>
           </Button>
-          {error && <Error>Something went wrong...</Error>}
-          <Link>DO NOT YOU REMEMBER THE PASSWORD?</Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
+          {error && <Error></Error>}
+          <Link>FORGOT PASSWORD?</Link>
+          <Link><NavLink style={{ color:"black"}} to="/register">CREATE A NEW ACCOUNT</NavLink> </Link>
+          
         </Form>
       </Wrapper>
     </Container>
