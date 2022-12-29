@@ -74,7 +74,7 @@ const Footer = () => {
       <Left>
         <Logo>iShop</Logo>
         <Desc>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor minim veniam, quis nostrud reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
